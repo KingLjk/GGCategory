@@ -6,10 +6,14 @@
 //  Copyright © 2018年 李佳贵. All rights reserved.
 //
 
+#ifndef GGCategoryHeader_h
+#define GGCategoryHeader_h
 
 
 
 #import "UIView+GGFrame.h"
+#import "UIView+GGGestureRecognizer.h"
+
 
 #import "UIColor+GGRGBA.h"
 #import "UIColor+GGHexString.h"
@@ -18,6 +22,7 @@
 
 
 #import "UIButton+GGTouchEvent.h"
+#import "UIButton+GGTitleAndImage.h"
 
 
-
+#endif /* GGCategoryHeader_h  */

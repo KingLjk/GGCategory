@@ -23,4 +23,14 @@
     return self;
 }
 
+- (instancetype _Nullable)initWithTarget:(nullable id)target selector:(SEL)selector forControlEvents:(UIControlEvents)event{
+    if (self = [super init]) {
+        [self addTarget:target action:selector forControlEvents:event];
+    }
+    return self;
+}
+
+- (instancetype _Nullable)initWithTarget:(nullable id)target selector:(SEL)selector{
+    return [self initWithTarget:target selector:selector forControlEvents:UIControlEventTouchUpInside];
+}
 @end

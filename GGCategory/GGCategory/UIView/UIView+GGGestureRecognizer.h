@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface UIView (GGGestureRecognizer)
+- (UITapGestureRecognizer  * _Nullable)addTapGestureWithTarget:(nullable id)target action:(nullable SEL)action;
+- (UILongPressGestureRecognizer * _Nullable)addLongPressGestureWithTarget:(nullable id)target action:(nullable SEL)action;
 
 @end

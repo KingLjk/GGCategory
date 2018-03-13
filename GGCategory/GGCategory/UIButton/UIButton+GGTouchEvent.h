@@ -10,6 +10,8 @@
 
 @interface UIButton (GGTouchEvent)
 
+- (instancetype _Nullable)initWithTarget:(nullable id)target selector:(SEL _Nonnull)selector;
+- (instancetype _Nullable)initWithTarget:(nullable id)target selector:(SEL _Nonnull)selector forControlEvents:(UIControlEvents)event;
 
 - (instancetype _Nullable )initWithTarget:(nullable id)target selectorName:(NSString * _Nonnull)selectorName;
 

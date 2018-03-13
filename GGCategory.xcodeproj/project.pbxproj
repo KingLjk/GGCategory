@@ -15,10 +15,11 @@
 		6352712D205777D1005B2166 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6352712C205777D1005B2166 /* main.m */; };
 		6352713720577A19005B2166 /* UIView+GGFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6352713620577A18005B2166 /* UIView+GGFrame.m */; };
 		6352714120578A00005B2166 /* UIColor+GGRGBA.m in Sources */ = {isa = PBXBuildFile; fileRef = 6352714020578A00005B2166 /* UIColor+GGRGBA.m */; };
-		635271652057A4EE005B2166 /* GGCategoryHeader.h in Sources */ = {isa = PBXBuildFile; fileRef = 635271642057A474005B2166 /* GGCategoryHeader.h */; };
 		635271682057A588005B2166 /* UIColor+GGHexString.m in Sources */ = {isa = PBXBuildFile; fileRef = 635271672057A588005B2166 /* UIColor+GGHexString.m */; };
 		6352716B2057A703005B2166 /* UIImage+GGGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 6352716A2057A703005B2166 /* UIImage+GGGIF.m */; };
 		635271902057B99E005B2166 /* UIButton+GGTouchEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 6352718F2057B99E005B2166 /* UIButton+GGTouchEvent.m */; };
+		635271932057C799005B2166 /* UIButton+GGTitleAndImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 635271922057C799005B2166 /* UIButton+GGTitleAndImage.m */; };
+		635271982057D877005B2166 /* UIView+GGGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 635271972057D877005B2166 /* UIView+GGGestureRecognizer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,10 @@
 		6352716A2057A703005B2166 /* UIImage+GGGIF.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GGGIF.m"; sourceTree = "<group>"; };
 		6352718E2057B99E005B2166 /* UIButton+GGTouchEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+GGTouchEvent.h"; sourceTree = "<group>"; };
 		6352718F2057B99E005B2166 /* UIButton+GGTouchEvent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+GGTouchEvent.m"; sourceTree = "<group>"; };
+		635271912057C799005B2166 /* UIButton+GGTitleAndImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+GGTitleAndImage.h"; sourceTree = "<group>"; };
+		635271922057C799005B2166 /* UIButton+GGTitleAndImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+GGTitleAndImage.m"; sourceTree = "<group>"; };
+		635271962057D877005B2166 /* UIView+GGGestureRecognizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+GGGestureRecognizer.h"; sourceTree = "<group>"; };
+		635271972057D877005B2166 /* UIView+GGGestureRecognizer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+GGGestureRecognizer.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +112,8 @@
 			children = (
 				6352713520577A18005B2166 /* UIView+GGFrame.h */,
 				6352713620577A18005B2166 /* UIView+GGFrame.m */,
+				635271962057D877005B2166 /* UIView+GGGestureRecognizer.h */,
+				635271972057D877005B2166 /* UIView+GGGestureRecognizer.m */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -127,6 +134,8 @@
 			children = (
 				6352718E2057B99E005B2166 /* UIButton+GGTouchEvent.h */,
 				6352718F2057B99E005B2166 /* UIButton+GGTouchEvent.m */,
+				635271912057C799005B2166 /* UIButton+GGTitleAndImage.h */,
+				635271922057C799005B2166 /* UIButton+GGTitleAndImage.m */,
 			);
 			path = UIButton;
 			sourceTree = "<group>";
@@ -219,7 +228,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				635271652057A4EE005B2166 /* GGCategoryHeader.h in Sources */,
 				6352713720577A19005B2166 /* UIView+GGFrame.m in Sources */,
 				6352716B2057A703005B2166 /* UIImage+GGGIF.m in Sources */,
 				635271902057B99E005B2166 /* UIButton+GGTouchEvent.m in Sources */,
@@ -227,6 +235,8 @@
 				6352712D205777D1005B2166 /* main.m in Sources */,
 				6352714120578A00005B2166 /* UIColor+GGRGBA.m in Sources */,
 				635271682057A588005B2166 /* UIColor+GGHexString.m in Sources */,
+				635271932057C799005B2166 /* UIButton+GGTitleAndImage.m in Sources */,
+				635271982057D877005B2166 /* UIView+GGGestureRecognizer.m in Sources */,
 				6352711F205777D1005B2166 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
