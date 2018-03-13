@@ -18,6 +18,7 @@
 		635271652057A4EE005B2166 /* GGCategoryHeader.h in Sources */ = {isa = PBXBuildFile; fileRef = 635271642057A474005B2166 /* GGCategoryHeader.h */; };
 		635271682057A588005B2166 /* UIColor+GGHexString.m in Sources */ = {isa = PBXBuildFile; fileRef = 635271672057A588005B2166 /* UIColor+GGHexString.m */; };
 		6352716B2057A703005B2166 /* UIImage+GGGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 6352716A2057A703005B2166 /* UIImage+GGGIF.m */; };
+		635271902057B99E005B2166 /* UIButton+GGTouchEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 6352718F2057B99E005B2166 /* UIButton+GGTouchEvent.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,8 @@
 		635271672057A588005B2166 /* UIColor+GGHexString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+GGHexString.m"; sourceTree = "<group>"; };
 		635271692057A703005B2166 /* UIImage+GGGIF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+GGGIF.h"; sourceTree = "<group>"; };
 		6352716A2057A703005B2166 /* UIImage+GGGIF.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GGGIF.m"; sourceTree = "<group>"; };
+		6352718E2057B99E005B2166 /* UIButton+GGTouchEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+GGTouchEvent.h"; sourceTree = "<group>"; };
+		6352718F2057B99E005B2166 /* UIButton+GGTouchEvent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+GGTouchEvent.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +125,8 @@
 		6352713C20578995005B2166 /* UIButton */ = {
 			isa = PBXGroup;
 			children = (
+				6352718E2057B99E005B2166 /* UIButton+GGTouchEvent.h */,
+				6352718F2057B99E005B2166 /* UIButton+GGTouchEvent.m */,
 			);
 			path = UIButton;
 			sourceTree = "<group>";
@@ -217,6 +222,7 @@
 				635271652057A4EE005B2166 /* GGCategoryHeader.h in Sources */,
 				6352713720577A19005B2166 /* UIView+GGFrame.m in Sources */,
 				6352716B2057A703005B2166 /* UIImage+GGGIF.m in Sources */,
+				635271902057B99E005B2166 /* UIButton+GGTouchEvent.m in Sources */,
 				63527122205777D1005B2166 /* ViewController.m in Sources */,
 				6352712D205777D1005B2166 /* main.m in Sources */,
 				6352714120578A00005B2166 /* UIColor+GGRGBA.m in Sources */,
