@@ -8,6 +8,13 @@
 
 #import "ViewController.h"
 
+
+
+#import "UIView+GGFrame.h"
+
+
+
+
 @interface ViewController ()
 
 @end
@@ -17,6 +24,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    UIView *redView = [UIView new];
+    redView.backgroundColor = [UIColor redColor];
+    
+    [self.view addSubview:redView];
+    
+    
+    redView.originX(100).originY(redView.x).sizeWidth(100).sizeHeight(redView.width * 2);
+    
+    
 }
 
 

@@ -13,6 +13,7 @@
 		63527127205777D1005B2166 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63527126205777D1005B2166 /* Assets.xcassets */; };
 		6352712A205777D1005B2166 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63527128205777D1005B2166 /* LaunchScreen.storyboard */; };
 		6352712D205777D1005B2166 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6352712C205777D1005B2166 /* main.m */; };
+		6352713720577A19005B2166 /* UIView+GGFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6352713620577A18005B2166 /* UIView+GGFrame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		63527129205777D1005B2166 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6352712B205777D1005B2166 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6352712C205777D1005B2166 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6352713520577A18005B2166 /* UIView+GGFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GGFrame.h"; sourceTree = "<group>"; };
+		6352713620577A18005B2166 /* UIView+GGFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GGFrame.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,7 @@
 		6352711C205777D1005B2166 /* GGCategory */ = {
 			isa = PBXGroup;
 			children = (
+				6352713320577A18005B2166 /* GGCategory */,
 				6352711D205777D1005B2166 /* AppDelegate.h */,
 				6352711E205777D1005B2166 /* AppDelegate.m */,
 				63527120205777D1005B2166 /* ViewController.h */,
@@ -69,6 +73,23 @@
 				6352712C205777D1005B2166 /* main.m */,
 			);
 			path = GGCategory;
+			sourceTree = "<group>";
+		};
+		6352713320577A18005B2166 /* GGCategory */ = {
+			isa = PBXGroup;
+			children = (
+				6352713420577A18005B2166 /* UIView */,
+			);
+			path = GGCategory;
+			sourceTree = "<group>";
+		};
+		6352713420577A18005B2166 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				6352713520577A18005B2166 /* UIView+GGFrame.h */,
+				6352713620577A18005B2166 /* UIView+GGFrame.m */,
+			);
+			path = UIView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6352713720577A19005B2166 /* UIView+GGFrame.m in Sources */,
 				63527122205777D1005B2166 /* ViewController.m in Sources */,
 				6352712D205777D1005B2166 /* main.m in Sources */,
 				6352711F205777D1005B2166 /* AppDelegate.m in Sources */,
