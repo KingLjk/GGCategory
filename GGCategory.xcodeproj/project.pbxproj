@@ -14,6 +14,10 @@
 		6352712A205777D1005B2166 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63527128205777D1005B2166 /* LaunchScreen.storyboard */; };
 		6352712D205777D1005B2166 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6352712C205777D1005B2166 /* main.m */; };
 		6352713720577A19005B2166 /* UIView+GGFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 6352713620577A18005B2166 /* UIView+GGFrame.m */; };
+		6352714120578A00005B2166 /* UIColor+GGRGBA.m in Sources */ = {isa = PBXBuildFile; fileRef = 6352714020578A00005B2166 /* UIColor+GGRGBA.m */; };
+		635271652057A4EE005B2166 /* GGCategoryHeader.h in Sources */ = {isa = PBXBuildFile; fileRef = 635271642057A474005B2166 /* GGCategoryHeader.h */; };
+		635271682057A588005B2166 /* UIColor+GGHexString.m in Sources */ = {isa = PBXBuildFile; fileRef = 635271672057A588005B2166 /* UIColor+GGHexString.m */; };
+		6352716B2057A703005B2166 /* UIImage+GGGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 6352716A2057A703005B2166 /* UIImage+GGGIF.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +33,13 @@
 		6352712C205777D1005B2166 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6352713520577A18005B2166 /* UIView+GGFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GGFrame.h"; sourceTree = "<group>"; };
 		6352713620577A18005B2166 /* UIView+GGFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GGFrame.m"; sourceTree = "<group>"; };
+		6352713F20578A00005B2166 /* UIColor+GGRGBA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+GGRGBA.h"; sourceTree = "<group>"; };
+		6352714020578A00005B2166 /* UIColor+GGRGBA.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+GGRGBA.m"; sourceTree = "<group>"; };
+		635271642057A474005B2166 /* GGCategoryHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGCategoryHeader.h; sourceTree = "<group>"; };
+		635271662057A588005B2166 /* UIColor+GGHexString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+GGHexString.h"; sourceTree = "<group>"; };
+		635271672057A588005B2166 /* UIColor+GGHexString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+GGHexString.m"; sourceTree = "<group>"; };
+		635271692057A703005B2166 /* UIImage+GGGIF.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+GGGIF.h"; sourceTree = "<group>"; };
+		6352716A2057A703005B2166 /* UIImage+GGGIF.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GGGIF.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +89,11 @@
 		6352713320577A18005B2166 /* GGCategory */ = {
 			isa = PBXGroup;
 			children = (
+				635271642057A474005B2166 /* GGCategoryHeader.h */,
+				6352713C20578995005B2166 /* UIButton */,
+				6352713B20578995005B2166 /* UIColor */,
+				6352713D20578995005B2166 /* UIImage */,
+				6352713E20578996005B2166 /* UILabel */,
 				6352713420577A18005B2166 /* UIView */,
 			);
 			path = GGCategory;
@@ -90,6 +106,40 @@
 				6352713620577A18005B2166 /* UIView+GGFrame.m */,
 			);
 			path = UIView;
+			sourceTree = "<group>";
+		};
+		6352713B20578995005B2166 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				6352713F20578A00005B2166 /* UIColor+GGRGBA.h */,
+				6352714020578A00005B2166 /* UIColor+GGRGBA.m */,
+				635271662057A588005B2166 /* UIColor+GGHexString.h */,
+				635271672057A588005B2166 /* UIColor+GGHexString.m */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
+		6352713C20578995005B2166 /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
+		6352713D20578995005B2166 /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				635271692057A703005B2166 /* UIImage+GGGIF.h */,
+				6352716A2057A703005B2166 /* UIImage+GGGIF.m */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
+		6352713E20578996005B2166 /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UILabel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,8 +168,9 @@
 		63527112205777D1005B2166 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = GG;
 				LastUpgradeCheck = 0920;
-				ORGANIZATIONNAME = "李佳贵";
+				ORGANIZATIONNAME = GG;
 				TargetAttributes = {
 					63527119205777D1005B2166 = {
 						CreatedOnToolsVersion = 9.2;
@@ -163,9 +214,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				635271652057A4EE005B2166 /* GGCategoryHeader.h in Sources */,
 				6352713720577A19005B2166 /* UIView+GGFrame.m in Sources */,
+				6352716B2057A703005B2166 /* UIImage+GGGIF.m in Sources */,
 				63527122205777D1005B2166 /* ViewController.m in Sources */,
 				6352712D205777D1005B2166 /* main.m in Sources */,
+				6352714120578A00005B2166 /* UIColor+GGRGBA.m in Sources */,
+				635271682057A588005B2166 /* UIColor+GGHexString.m in Sources */,
 				6352711F205777D1005B2166 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
