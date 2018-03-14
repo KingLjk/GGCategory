@@ -16,7 +16,7 @@
 + (instancetype)cellWithTableView:(UITableView *)tableView style:(UITableViewCellStyle)style{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([self class])];
     if (!cell) {
-        NSString *reuseIdentifier = [NSString stringWithFormat:@"%@-%ld",NSStringFromClass([self class]),style];
+        NSString *reuseIdentifier = [NSString stringWithFormat:@"%@-%ld",NSStringFromClass([self class]),(long)style];
         cell = [[self alloc] initWithStyle:style reuseIdentifier:reuseIdentifier];
     }
     return cell;
