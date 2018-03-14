@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "GGCategory"
-  s.version      = "0.1.2"
+  s.version      = "0.1.3"
   s.summary      = "GGCategory provide basic class extension services."
 
   # This description is used to generate tags and improve search results.
@@ -90,9 +90,7 @@ This library provides developers with frequently used classifications to facilit
   #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
   #
-# "GGCategory/GGCategory/*.h","GGCategory/GGCategory/**/*.{h,m}"
- s.source_files  = "GGCategory/*","GGCategory/**/*","GGCategory/GGCategory/*.h","GGCategory/GGCategory/**/*.{h,m}"
-#s.source_files  = "GGCategory/GGCategory/*.h","GGCategory/GGCategory/**/*.{h,m}"
+    s.source_files  = "GGCategory/GGCategory/*.h","GGCategory/GGCategory/**/*.{h,m}"
 
   # s.exclude_files = "Classes/Exclude"
 

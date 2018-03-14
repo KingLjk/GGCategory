@@ -1,14 +1,15 @@
 //
-//  UIButton+GGTitleAndImage.m
+//  UIButton+GGConfiguration.m
 //  GGCategory
 //
-//  Created by GG on 2018/3/13.
+//  Created by GG on 2018/3/15.
 //  Copyright © 2018年 GG. All rights reserved.
 //
 
-#import "UIButton+GGTitleAndImage.h"
+#import "UIButton+GGConfiguration.h"
 
-@implementation UIButton (GGTitleAndImage)
+@implementation UIButton (GGConfiguration)
+
 #pragma 单个设置
 #pragma ********************* normal *********************
 - (UIButton *(^)(NSString *))normalTitle{
@@ -29,7 +30,7 @@
         [self setNormalImage:image];
         return self;
     };
-
+    
 }
 
 #pragma ********************* selected *********************
@@ -78,6 +79,14 @@
         return self;
     };
 }
+- (UIButton *(^)(UIFont *))font{
+    return ^(UIFont *value){
+        self.titleLabel.font = value;
+        return self;
+    };
+}
+
+
 #pragma 组合设置
 #pragma ********************* title And titleColor *********************
 - (UIButton *(^)(NSString *title, UIColor *color))normalTitleAndTitleColor{
@@ -123,7 +132,7 @@
         [self setHighlightedImage:image];
         return self;
     };
-
+    
 }
 
 
@@ -138,6 +147,7 @@
 }
 - (void)setHighlightedTitle:(NSString *)title{
     [self setTitle:title forState:UIControlStateNormal];
+    
 }
 - (void)setNormalTitleColor:(UIColor *)color{
     [self setTitleColor:color forState:UIControlStateNormal];
@@ -153,25 +163,11 @@
 - (void)setNormalImage:(UIImage *)image{
     [self setImage:image forState:UIControlStateNormal];
 }
-
 - (void)setSelectedImage:(UIImage *)image{
     [self setImage:image forState:UIControlStateSelected];
 }
-
 - (void)setHighlightedImage:(UIImage *)image{
     [self setImage:image forState:UIControlStateHighlighted];
 }
-
-
-- (void)setTitle:(NSString *)title titleColor:(UIColor *)titleColor image:(UIImage *)image{
-    [self setTitle:title titleColor:titleColor image:image  forState:UIControlStateNormal];
-}
-
-- (void)setTitle:(NSString *)title titleColor:(UIColor *)titleColor image:(UIImage *)image forState:(UIControlState)controlState{
-    [self setTitle:title forState:controlState];
-    [self setImage:image forState:controlState];
-    [self setTitleColor:titleColor forState:controlState];
-}
-
 
 @end

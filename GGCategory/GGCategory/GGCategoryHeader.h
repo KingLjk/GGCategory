@@ -22,7 +22,14 @@
 
 
 #import "UIButton+GGTouchEvent.h"
-#import "UIButton+GGTitleAndImage.h"
+#import "UIButton+GGConfiguration.h"
 
+
+#import "UILabel+GGConfiguration.h"
+
+
+#import "UITableViewCell+GGInstance.h"
+
+#import "UICollectionViewFlowLayout+GGConfiguration.h"
 
 #endif /* GGCategoryHeader_h  */

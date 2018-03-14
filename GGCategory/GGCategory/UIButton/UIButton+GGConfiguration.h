@@ -1,14 +1,15 @@
 //
-//  UIButton+GGTitleAndImage.h
+//  UIButton+GGConfiguration.h
 //  GGCategory
 //
-//  Created by GG on 2018/3/13.
+//  Created by GG on 2018/3/15.
 //  Copyright © 2018年 GG. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface UIButton (GGTitleAndImage)
+@interface UIButton (GGConfiguration)
+
 #pragma ********************* 推荐使用 *********************
 
 #pragma 单个设置
@@ -30,6 +31,8 @@
 #pragma ********************* backGroundColor *********************
 - (UIButton *(^)(UIColor *))backGroundColor;
 
+- (UIButton *(^)(UIFont *))font;
+
 // 组合设置
 #pragma ********************* title And titleColor *********************
 - (UIButton *(^)(NSString *title, UIColor *color))normalTitleAndTitleColor;
@@ -43,19 +46,6 @@
 
 
 
-#pragma ***************************************
 
-- (void)setNormalTitle:(NSString *)title;
-- (void)setSelectedTitle:(NSString *)title;
-- (void)setHighlightedTitle:(NSString *)title;
-
-
-- (void)setNormalTitleColor:(UIColor *)color;
-- (void)setSelectedTitleColor:(UIColor *)color;
-- (void)setHighlightedTitleColor:(UIColor *)color;
-
-
-- (void)setNormalImage:(UIImage *)image;
-- (void)setSelectedImage:(UIImage *)image;
-- (void)setHighlightedImage:(UIImage *)image;
 @end
+
