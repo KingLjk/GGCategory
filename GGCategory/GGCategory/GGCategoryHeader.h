@@ -32,4 +32,7 @@
 
 #import "UICollectionViewFlowLayout+GGConfiguration.h"
 
+
+#import "NSObject+GGExtension.h"
+
 #endif /* GGCategoryHeader_h  */

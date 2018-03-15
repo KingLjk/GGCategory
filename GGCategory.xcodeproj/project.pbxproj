@@ -23,6 +23,7 @@
 		6352716B2057A703005B2166 /* UIImage+GGGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 6352716A2057A703005B2166 /* UIImage+GGGIF.m */; };
 		635271902057B99E005B2166 /* UIButton+GGTouchEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 6352718F2057B99E005B2166 /* UIButton+GGTouchEvent.m */; };
 		635271982057D877005B2166 /* UIView+GGGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 635271972057D877005B2166 /* UIView+GGGestureRecognizer.m */; };
+		6396E41F205A757900C49B6A /* NSObject+GGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6396E41E205A757900C49B6A /* NSObject+GGExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,8 @@
 		6352718F2057B99E005B2166 /* UIButton+GGTouchEvent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+GGTouchEvent.m"; sourceTree = "<group>"; };
 		635271962057D877005B2166 /* UIView+GGGestureRecognizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+GGGestureRecognizer.h"; sourceTree = "<group>"; };
 		635271972057D877005B2166 /* UIView+GGGestureRecognizer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+GGGestureRecognizer.m"; sourceTree = "<group>"; };
+		6396E41D205A757900C49B6A /* NSObject+GGExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+GGExtension.h"; sourceTree = "<group>"; };
+		6396E41E205A757900C49B6A /* NSObject+GGExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GGExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				635271642057A474005B2166 /* GGCategoryHeader.h */,
+				6396E41C205A755D00C49B6A /* NSObject */,
 				632B119620598D630061E3E7 /* UICollectionViewFlowLayout */,
 				632B119520598D630061E3E7 /* UITableViewCell */,
 				6352713C20578995005B2166 /* UIButton */,
@@ -185,6 +189,15 @@
 				632B11A1205990B10061E3E7 /* UILabel+GGConfiguration.m */,
 			);
 			path = UILabel;
+			sourceTree = "<group>";
+		};
+		6396E41C205A755D00C49B6A /* NSObject */ = {
+			isa = PBXGroup;
+			children = (
+				6396E41D205A757900C49B6A /* NSObject+GGExtension.h */,
+				6396E41E205A757900C49B6A /* NSObject+GGExtension.m */,
+			);
+			path = NSObject;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,6 +285,7 @@
 				635271682057A588005B2166 /* UIColor+GGHexString.m in Sources */,
 				635271982057D877005B2166 /* UIView+GGGestureRecognizer.m in Sources */,
 				6352711F205777D1005B2166 /* AppDelegate.m in Sources */,
+				6396E41F205A757900C49B6A /* NSObject+GGExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
