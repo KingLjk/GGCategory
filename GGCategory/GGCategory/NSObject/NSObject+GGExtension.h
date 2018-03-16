@@ -40,7 +40,21 @@
 - (NSArray *)gg_getProperties;
 + (NSArray *)gg_getProperties;
 
+/**
+ 实例化一个模型
 
+ @param dict 模型对应的字典数据
+ @return 模型
+ */
 + (instancetype)instanceWithDict:(NSDictionary *)dict;
+
+
+/**
+ 模型数组便捷创建
+
+ @param array 字典数组
+ @return 返回一个模型数组
+ */
++ (NSArray *)instanceWithArray:(NSArray *)array;
 
 @end

@@ -33,6 +33,7 @@
 
 - (UIButton *(^)(UIFont *))font;
 
+
 // 组合设置
 #pragma ********************* title And titleColor *********************
 - (UIButton *(^)(NSString *title, UIColor *color))normalTitleAndTitleColor;

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		630B37CB205B5A4E00F47299 /* UITextField+GGConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 630B37CA205B5A4E00F47299 /* UITextField+GGConfiguration.m */; };
+		630B37CE205B60DB00F47299 /* UIView+GGConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 630B37CD205B60DB00F47299 /* UIView+GGConfiguration.m */; };
 		632B119920598D960061E3E7 /* UICollectionViewFlowLayout+GGConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 632B119820598D960061E3E7 /* UICollectionViewFlowLayout+GGConfiguration.m */; };
 		632B119F20598FA10061E3E7 /* UITableViewCell+GGInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 632B119E20598FA10061E3E7 /* UITableViewCell+GGInstance.m */; };
 		632B11A2205990B10061E3E7 /* UILabel+GGConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 632B11A1205990B10061E3E7 /* UILabel+GGConfiguration.m */; };
@@ -27,6 +29,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		630B37C9205B5A4E00F47299 /* UITextField+GGConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITextField+GGConfiguration.h"; sourceTree = "<group>"; };
+		630B37CA205B5A4E00F47299 /* UITextField+GGConfiguration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITextField+GGConfiguration.m"; sourceTree = "<group>"; };
+		630B37CC205B60DB00F47299 /* UIView+GGConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+GGConfiguration.h"; sourceTree = "<group>"; };
+		630B37CD205B60DB00F47299 /* UIView+GGConfiguration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+GGConfiguration.m"; sourceTree = "<group>"; };
 		632B119720598D960061E3E7 /* UICollectionViewFlowLayout+GGConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UICollectionViewFlowLayout+GGConfiguration.h"; sourceTree = "<group>"; };
 		632B119820598D960061E3E7 /* UICollectionViewFlowLayout+GGConfiguration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UICollectionViewFlowLayout+GGConfiguration.m"; sourceTree = "<group>"; };
 		632B119D20598FA10061E3E7 /* UITableViewCell+GGInstance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+GGInstance.h"; sourceTree = "<group>"; };
@@ -73,6 +79,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		630B37C7205B59C700F47299 /* UITextField */ = {
+			isa = PBXGroup;
+			children = (
+				630B37C9205B5A4E00F47299 /* UITextField+GGConfiguration.h */,
+				630B37CA205B5A4E00F47299 /* UITextField+GGConfiguration.m */,
+			);
+			path = UITextField;
+			sourceTree = "<group>";
+		};
 		632B119520598D630061E3E7 /* UITableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				635271642057A474005B2166 /* GGCategoryHeader.h */,
+				630B37C7205B59C700F47299 /* UITextField */,
 				6396E41C205A755D00C49B6A /* NSObject */,
 				632B119620598D630061E3E7 /* UICollectionViewFlowLayout */,
 				632B119520598D630061E3E7 /* UITableViewCell */,
@@ -147,6 +163,8 @@
 				6352713620577A18005B2166 /* UIView+GGFrame.m */,
 				635271962057D877005B2166 /* UIView+GGGestureRecognizer.h */,
 				635271972057D877005B2166 /* UIView+GGGestureRecognizer.m */,
+				630B37CC205B60DB00F47299 /* UIView+GGConfiguration.h */,
+				630B37CD205B60DB00F47299 /* UIView+GGConfiguration.m */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -281,9 +299,11 @@
 				635271902057B99E005B2166 /* UIButton+GGTouchEvent.m in Sources */,
 				63527122205777D1005B2166 /* ViewController.m in Sources */,
 				6352712D205777D1005B2166 /* main.m in Sources */,
+				630B37CB205B5A4E00F47299 /* UITextField+GGConfiguration.m in Sources */,
 				6352714120578A00005B2166 /* UIColor+GGRGBA.m in Sources */,
 				635271682057A588005B2166 /* UIColor+GGHexString.m in Sources */,
 				635271982057D877005B2166 /* UIView+GGGestureRecognizer.m in Sources */,
+				630B37CE205B60DB00F47299 /* UIView+GGConfiguration.m in Sources */,
 				6352711F205777D1005B2166 /* AppDelegate.m in Sources */,
 				6396E41F205A757900C49B6A /* NSObject+GGExtension.m in Sources */,
 			);
@@ -420,11 +440,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FY223SZVL6;
+				DEVELOPMENT_TEAM = XV3T68XQ96;
 				INFOPLIST_FILE = GGCategory/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.blase3d.GGCategory;
+				PRODUCT_BUNDLE_IDENTIFIER = com.manew.GGCategory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -435,11 +455,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FY223SZVL6;
+				DEVELOPMENT_TEAM = XV3T68XQ96;
 				INFOPLIST_FILE = GGCategory/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.blase3d.GGCategory;
+				PRODUCT_BUNDLE_IDENTIFIER = com.manew.GGCategory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

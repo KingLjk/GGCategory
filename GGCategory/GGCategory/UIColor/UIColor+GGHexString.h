@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+#define GGHexColor(stringToConvert) [UIColor gg_colorWithHexString:stringToConvert]
+#define GGHexAlphaColor(stringToConvert,a) [UIColor gg_colorWithHexString:stringToConvert alpha:a]
+
 @interface UIColor (GGHexString)
 + (UIColor*)gg_colorWithHexString:(NSString*)stringToConvert;
++ (UIColor*)gg_colorWithHexString:(NSString*)stringToConvert alpha:(float)alpha;
 @end

@@ -37,6 +37,13 @@
         return self;
     };
 }
+- (UILabel * (^) (NSAttributedString *))setAttributedText{
+    return ^(NSAttributedString *value){
+        self.attributedText = value;
+        return self;
+    };
+}
+
 
 
 @end

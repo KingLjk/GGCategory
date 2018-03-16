@@ -10,6 +10,7 @@
 
 @implementation UIButton (GGConfiguration)
 
+
 #pragma 单个设置
 #pragma ********************* normal *********************
 - (UIButton *(^)(NSString *))normalTitle{

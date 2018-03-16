@@ -15,7 +15,6 @@
 }
 - (void)setX:(CGFloat)x {
     self.frame = CGRectMake(x, self.y, self.width, self.height);
-    
 }
 - (CGFloat)y {
     return self.frame.origin.y;

@@ -16,6 +16,16 @@
 @implementation NSObject (GGExtension)
 #pragma clang diagnostic pop
 
+
++ (NSArray *)instanceWithArray:(NSArray *)array{
+    NSMutableArray *mArray = [NSMutableArray array];
+    for (id value in array) {
+        NSObject *obj = [self gg_objectWithDict:value];
+        [mArray addObject:obj];
+    }
+    return mArray.copy;
+}
+
 + (instancetype)gg_objectWithDict:(NSDictionary *)dict{
     NSObject *obj = [self new];
     [obj gg_configWithDict:dict];

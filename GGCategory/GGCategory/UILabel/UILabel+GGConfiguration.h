@@ -18,4 +18,6 @@
 
 - (UILabel * (^) (NSString *))setText;
 
+- (UILabel * (^) (NSAttributedString *))setAttributedText;
+
 @end

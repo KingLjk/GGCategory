@@ -12,6 +12,7 @@
 
 #import "GGCategoryHeader.h"
 
+
 @interface ViewController ()
 
 @end
@@ -38,9 +39,12 @@
     [btn.normalTitleAndTitleColor(@"hehe",[UIColor greenColor]).backGroundColor([UIColor yellowColor]) sizeToFit];
     btn.center = self.view.center;
     
+    
 }
 
-
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

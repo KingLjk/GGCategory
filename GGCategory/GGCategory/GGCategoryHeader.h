@@ -13,6 +13,8 @@
 
 #import "UIView+GGFrame.h"
 #import "UIView+GGGestureRecognizer.h"
+#import "UIView+GGConfiguration.h"
+
 
 
 #import "UIColor+GGRGBA.h"
@@ -26,7 +28,7 @@
 
 
 #import "UILabel+GGConfiguration.h"
-
+#import "UITextField+GGConfiguration.h"
 
 #import "UITableViewCell+GGInstance.h"
 

@@ -14,9 +14,10 @@
     return [self cellWithTableView:tableView style:UITableViewCellStyleDefault];
 }
 + (instancetype)cellWithTableView:(UITableView *)tableView style:(UITableViewCellStyle)style{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([self class])];
+    NSString *reuseIdentifier = [NSString stringWithFormat:@"%@-%ld",NSStringFromClass([self class]),(long)style];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
     if (!cell) {
-        NSString *reuseIdentifier = [NSString stringWithFormat:@"%@-%ld",NSStringFromClass([self class]),(long)style];
+        
         cell = [[self alloc] initWithStyle:style reuseIdentifier:reuseIdentifier];
     }
     return cell;
