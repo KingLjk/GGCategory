@@ -19,6 +19,13 @@
 - (void)setWidth:(CGFloat)width;
 
 
+- (CGSize)size;
+- (void)setSize:(CGSize)size;
+
+- (CGPoint)origin;
+- (void)setOrigin:(CGPoint)origin;
+
+
 
 /**
  // 函数式 + 链式(带参)
@@ -30,9 +37,14 @@
  后边的参数位置可以使用前边刚设置的参数： 
  redView.originX(100).originY(redView.x).sizeWidth(100).sizeHeight(redView.width * 2);
  */
+
 - (UIView *(^)(CGFloat))originX;
 
 - (UIView *(^)(CGFloat))originY;
+
+- (UIView *(^)(CGPoint))gg_origin;
+
+- (UIView *(^)(CGSize))gg_size;
 
 - (UIView *(^)(CGFloat))sizeWidth;
 

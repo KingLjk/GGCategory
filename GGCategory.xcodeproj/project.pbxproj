@@ -25,6 +25,8 @@
 		6352716B2057A703005B2166 /* UIImage+GGGIF.m in Sources */ = {isa = PBXBuildFile; fileRef = 6352716A2057A703005B2166 /* UIImage+GGGIF.m */; };
 		635271902057B99E005B2166 /* UIButton+GGTouchEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 6352718F2057B99E005B2166 /* UIButton+GGTouchEvent.m */; };
 		635271982057D877005B2166 /* UIView+GGGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 635271972057D877005B2166 /* UIView+GGGestureRecognizer.m */; };
+		636BAF65205F5B2C008C2DA6 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 636BAF64205F5B2C008C2DA6 /* Person.m */; };
+		636BAF68205F5B3D008C2DA6 /* Son.m in Sources */ = {isa = PBXBuildFile; fileRef = 636BAF67205F5B3D008C2DA6 /* Son.m */; };
 		6396E41F205A757900C49B6A /* NSObject+GGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6396E41E205A757900C49B6A /* NSObject+GGExtension.m */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +66,10 @@
 		6352718F2057B99E005B2166 /* UIButton+GGTouchEvent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+GGTouchEvent.m"; sourceTree = "<group>"; };
 		635271962057D877005B2166 /* UIView+GGGestureRecognizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+GGGestureRecognizer.h"; sourceTree = "<group>"; };
 		635271972057D877005B2166 /* UIView+GGGestureRecognizer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+GGGestureRecognizer.m"; sourceTree = "<group>"; };
+		636BAF63205F5B2C008C2DA6 /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		636BAF64205F5B2C008C2DA6 /* Person.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		636BAF66205F5B3D008C2DA6 /* Son.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Son.h; sourceTree = "<group>"; };
+		636BAF67205F5B3D008C2DA6 /* Son.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Son.m; sourceTree = "<group>"; };
 		6396E41D205A757900C49B6A /* NSObject+GGExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+GGExtension.h"; sourceTree = "<group>"; };
 		6396E41E205A757900C49B6A /* NSObject+GGExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GGExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,6 +141,10 @@
 				63527128205777D1005B2166 /* LaunchScreen.storyboard */,
 				6352712B205777D1005B2166 /* Info.plist */,
 				6352712C205777D1005B2166 /* main.m */,
+				636BAF63205F5B2C008C2DA6 /* Person.h */,
+				636BAF64205F5B2C008C2DA6 /* Person.m */,
+				636BAF66205F5B3D008C2DA6 /* Son.h */,
+				636BAF67205F5B3D008C2DA6 /* Son.m */,
 			);
 			path = GGCategory;
 			sourceTree = "<group>";
@@ -294,7 +304,9 @@
 				6352713720577A19005B2166 /* UIView+GGFrame.m in Sources */,
 				632B11A5205990F40061E3E7 /* UIButton+GGConfiguration.m in Sources */,
 				632B119F20598FA10061E3E7 /* UITableViewCell+GGInstance.m in Sources */,
+				636BAF65205F5B2C008C2DA6 /* Person.m in Sources */,
 				632B11A2205990B10061E3E7 /* UILabel+GGConfiguration.m in Sources */,
+				636BAF68205F5B3D008C2DA6 /* Son.m in Sources */,
 				6352716B2057A703005B2166 /* UIImage+GGGIF.m in Sources */,
 				635271902057B99E005B2166 /* UIButton+GGTouchEvent.m in Sources */,
 				63527122205777D1005B2166 /* ViewController.m in Sources */,

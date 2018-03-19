@@ -45,8 +45,16 @@
         customClassNameInArrayProperty = [self performSelector:@selector(customClassNameInArrayProperty)];
     }
     
+    
     Class class = self.class;
+    
     while (class && class != [NSObject class]) {
+        
+        // 获取数组中元素与字典中元素名字不对应的列表
+        NSDictionary *replacedKeyFromPropertyName ;
+        if ([class respondsToSelector:@selector(gg_replacedKeyFromPropertyName)]) {
+            replacedKeyFromPropertyName = [class gg_replacedKeyFromPropertyName];
+        }
         // 获取所有属性
         unsigned int  outCount;
         Ivar _Nonnull *ivarList = class_copyIvarList(class, &outCount);
@@ -64,15 +72,27 @@
             NSString *propertyTypeEncoding = [NSString stringWithUTF8String:typeEncoding];
             
             id value = [dict valueForKey:keyWithoutUnderscorePrefix];
+            
+            // 如果有字符串的名字映射，则利用映射名字获取字典中的键值
+            NSString *keyInDict = replacedKeyFromPropertyName[keyWithoutUnderscorePrefix];
+            if (keyInDict) {
+                value = [dict valueForKey:keyInDict];
+            }
+
+            
             if (!value) {
                 continue;
             }else{
                 
                 
+                NSString *valueClassString = NSStringFromClass([value class]);
+                NSLog(@"字典中value:%@的类名%@",value,valueClassString);
                 //处理 模型数组
-                if ([NSStringFromClass([value class]) isEqualToString:@"__NSCFArray"]) {
-                    if (![propertyTypeEncoding isEqualToString:@"@\"NSArray\""]) {
-                        NSLog(@"模型中属性：%@不为数组格式",keyWithoutUnderscorePrefix);
+                // __NSCFArray
+                // __NSArrayI
+                if ([valueClassString isEqualToString:@"__NSCFArray"] || [valueClassString containsString:@"__NSArray"]) {
+                    if (![propertyTypeEncoding isEqualToString:@"@\"NSArray\""] && ![propertyTypeEncoding isEqualToString:@"@\"NSMutableArray\""]) {
+                        NSLog(@"模型中属性：%@不为数组格式, 为：%@格式",keyWithoutUnderscorePrefix,propertyTypeEncoding);
                         continue;
                     }
                     NSString *customClassName = customClassNameInArrayProperty[keyWithoutUnderscorePrefix];
@@ -91,34 +111,49 @@
                             }
                             [self setValue:mArray.copy forKey:keyWithoutUnderscorePrefix];
                         }else{
-                            NSLog(@"模型中数组属性中找不到自定义类型：%@",keyWithoutUnderscorePrefix);
+//                            NSLog(@"模型中数组属性中找不到自定义类型：%@",keyWithoutUnderscorePrefix);
                         }
                     }else{
-                        NSLog(@"模型中数组属性中找不到自定义类型：%@",keyWithoutUnderscorePrefix);
+                        
+                        if ([propertyTypeEncoding isEqualToString:@"@\"NSArray\""] || [propertyTypeEncoding isEqualToString:@"@\"NSMutableArray\""]) {
+                            [self setValue:value forKey:keyWithoutUnderscorePrefix];
+                            continue;
+                        }else{
+                            NSLog(@"模型中属性：%@不为数组格式, 为：%@格式",keyWithoutUnderscorePrefix,propertyTypeEncoding);
+                            continue;
+                        }
+                        
                     }
                     continue;
                     // 处理 模型属性
-                }else if ([NSStringFromClass([value class]) isEqualToString:@"__NSCFDictionary"]){
-                    
-                    
+                    // __NSDictionaryI
+                    // __NSCFDictionary
+                    // __NSSingleEntryDictionaryI
+                }else if ([valueClassString containsString:@"NS"] && [valueClassString containsString:@"Dictionary"]){
                     
                     NSString *customClassName = customClassNameInThePropertyList[keyWithoutUnderscorePrefix];
                     // 排除自定义类书写出错 ： BOOK 写成 BOOk
                     if (customClassName) {
                         Class customClass = NSClassFromString(customClassName);
+                        
                         if (customClass) {
                             NSObject *obj = [customClass gg_objectWithDict:value];
                             
                             [self setValue:obj forKey:keyWithoutUnderscorePrefix];
                         }else{
-                            NSLog(@"模型中属性：%@不为自定义类型",keyWithoutUnderscorePrefix);
+//                            NSLog(@"模型中属性：%@不为自定义类型,不进行赋值操作",keyWithoutUnderscorePrefix);
                         }
                         
                     }else{
-                        NSLog(@"模型中属性：%@不为自定义类型",keyWithoutUnderscorePrefix);
+                        
+                        
+                        if ([propertyTypeEncoding isEqualToString:@"@\"NSDictionary\""] ||  [propertyTypeEncoding isEqualToString:@"@\"NSMutableDictionary\""]) {
+                            [self setValue:value forKey:keyWithoutUnderscorePrefix];
+                            continue;
+                        }
                     }
                     continue;
-                    // 处理其他类型
+                    // 处理其他类型(除去字典和数组的类型)
                 }else{
                     [self setValue:value forKey:keyWithoutUnderscorePrefix];
                     

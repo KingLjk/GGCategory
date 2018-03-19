@@ -35,6 +35,22 @@
 - (void)setWidth:(CGFloat)width {
     self.frame = CGRectMake(self.x, self.y, width, self.height);
 }
+
+- (CGSize)size{
+    return self.frame.size;
+}
+- (void)setSize:(CGSize)size{
+    self.frame = CGRectMake(self.x, self.y, size.width, size.height);
+}
+- (CGPoint)origin{
+    return self.frame.origin;
+}
+- (void)setOrigin:(CGPoint)origin{
+    self.frame = CGRectMake(origin.x, origin.y, self.width, self.height);
+}
+
+
+
 - (UIView *(^)(CGFloat))originX{
     return ^(CGFloat value){
         self.x = value;
@@ -44,6 +60,19 @@
 - (UIView *(^)(CGFloat))originY{
     return ^(CGFloat value){
         self.y = value;
+        return self;
+    };
+}
+- (UIView *(^)(CGPoint))gg_origin{
+    return ^(CGPoint value){
+        self.origin = value;
+        return self;
+    };
+}
+
+- (UIView *(^)(CGSize))gg_size{
+    return ^(CGSize value){
+        self.size = value;
         return self;
     };
 }

@@ -37,6 +37,17 @@
  */
 - (NSDictionary  *)customClassNameInThePropertyList;
 
+
+/**
+ 实现这个方法的目的：告诉GGExtension框架模型中的属性名对应着字典的哪个key
+ @{
+ @"p_name":@"d_keyName",    // 字典中的d_keyName对应的值会赋值给属性 p_name
+ }
+ @return return value description
+ */
++ (NSDictionary *)gg_replacedKeyFromPropertyName;
+
+
 - (NSArray *)gg_getProperties;
 + (NSArray *)gg_getProperties;
 
