@@ -20,7 +20,7 @@
              @"son":@"baby"
              };
 }
-- (NSDictionary *)customClassNameInThePropertyList{
+- (NSDictionary *)gg_customClassNameInThePropertyList{
     return @{@"son":@"Son"};
 }
 

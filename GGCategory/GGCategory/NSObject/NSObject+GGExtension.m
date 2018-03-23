@@ -17,11 +17,13 @@
 #pragma clang diagnostic pop
 
 
-+ (NSArray *)instanceWithArray:(NSArray *)array{
++ (NSArray *)gg_objectsWithArray:(NSArray *)array{
     NSMutableArray *mArray = [NSMutableArray array];
     for (id value in array) {
         NSObject *obj = [self gg_objectWithDict:value];
+        if (obj) {
         [mArray addObject:obj];
+        }
     }
     return mArray.copy;
 }
@@ -202,17 +204,19 @@
 }
 
 
-+ (instancetype)instanceWithDict:(NSDictionary *)dict{
-    
-    NSObject *obj = [[self alloc] init];
-    if (dict) {
-        [obj setValuesForKeysWithDictionary:dict];
-    }
-    return obj;
-}
-- (void)setValue:(id)value forUndefinedKey:(NSString *)key{
-    
-}
 
 
 @end
+
+//
+//+ (instancetype)gg_instanceWithDict:(NSDictionary *)dict{
+//
+//    NSObject *obj = [[self alloc] init];
+//    if (dict) {
+//        [obj setValuesForKeysWithDictionary:dict];
+//    }
+//    return obj;
+//}
+//- (void)setValue:(id)value forUndefinedKey:(NSString *)key{
+//
+//}

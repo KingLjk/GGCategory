@@ -10,85 +10,88 @@
 
 @implementation UIView (GGFrame)
 
-- (CGFloat)x {
+- (CGFloat)gg_x {
     return self.frame.origin.x;
 }
-- (void)setX:(CGFloat)x {
-    self.frame = CGRectMake(x, self.y, self.width, self.height);
+- (void)setGg_x:(CGFloat)x {
+    self.frame = CGRectMake(x, self.gg_y, self.gg_width, self.gg_height);
 }
-- (CGFloat)y {
+- (CGFloat)gg_y {
     return self.frame.origin.y;
 }
-- (void)setY:(CGFloat)y {
-    self.frame = CGRectMake(self.x, y, self.width, self.height);
+- (void)setGg_y:(CGFloat)y {
+    self.frame = CGRectMake(self.gg_x, y, self.gg_width, self.gg_height);
 }
-- (CGFloat)height {
-    return self.frame.size.height;
-}
-- (void)setHeight:(CGFloat)height {
-    self.frame = CGRectMake(self.x, self.y, self.width, height);
-}
-- (CGFloat)width {
+- (CGFloat)gg_width {
     
     return self.frame.size.width;
 }
-- (void)setWidth:(CGFloat)width {
-    self.frame = CGRectMake(self.x, self.y, width, self.height);
+- (void)setGg_width:(CGFloat)width {
+    self.frame = CGRectMake(self.gg_x, self.gg_y, width, self.gg_height);
+}
+- (CGFloat)gg_height {
+    return self.frame.size.height;
+}
+- (void)setGg_height:(CGFloat)height {
+    self.frame = CGRectMake(self.gg_x, self.gg_y, self.gg_width, height);
 }
 
-- (CGSize)size{
-    return self.frame.size;
-}
-- (void)setSize:(CGSize)size{
-    self.frame = CGRectMake(self.x, self.y, size.width, size.height);
-}
-- (CGPoint)origin{
+- (CGPoint)gg_origin{
     return self.frame.origin;
 }
-- (void)setOrigin:(CGPoint)origin{
-    self.frame = CGRectMake(origin.x, origin.y, self.width, self.height);
+- (void)setGg_origin:(CGPoint)origin{
+    self.frame = CGRectMake(origin.x, origin.y, self.gg_width, self.gg_height);
+}
+
+- (CGSize)gg_size{
+    return self.frame.size;
+}
+- (void)setGg_size:(CGSize)size{
+    self.frame = CGRectMake(self.gg_x, self.gg_y, size.width, size.height);
 }
 
 
-
-- (UIView *(^)(CGFloat))originX{
+#pragma ********************* 函数式 + 链式(带参) *********************
+- (UIView *(^)(CGFloat))gg_setX{
     return ^(CGFloat value){
-        self.x = value;
+        self.gg_x = value;
         return self;
     };
 }
-- (UIView *(^)(CGFloat))originY{
+- (UIView *(^)(CGFloat))gg_setY{
     return ^(CGFloat value){
-        self.y = value;
+        self.gg_y = value;
         return self;
     };
 }
-- (UIView *(^)(CGPoint))gg_origin{
+
+- (UIView *(^)(CGFloat))gg_setWidth{
+    return ^(CGFloat value){
+        self.gg_width = value;
+        return self;
+    };
+}
+- (UIView *(^)(CGFloat))gg_setHeight{
+    return ^(CGFloat value){
+        self.gg_height = value;
+        return self;
+    };
+}
+
+- (UIView *(^)(CGPoint))gg_setOrigin{
     return ^(CGPoint value){
-        self.origin = value;
+        self.gg_origin = value;
         return self;
     };
 }
 
-- (UIView *(^)(CGSize))gg_size{
+- (UIView *(^)(CGSize))gg_setSize{
     return ^(CGSize value){
-        self.size = value;
+        self.gg_size = value;
         return self;
     };
 }
 
-- (UIView *(^)(CGFloat))sizeWidth{
-    return ^(CGFloat value){
-        self.width = value;
-        return self;
-    };
-}
 
-- (UIView *(^)(CGFloat))sizeHeight{
-    return ^(CGFloat value){
-        self.height = value;
-        return self;
-    };
-}
-    
+
 @end

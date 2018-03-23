@@ -10,14 +10,13 @@
 
 @implementation UITableViewCell (GGInstance)
 
-+ (instancetype)cellWithTableView:(UITableView *)tableView{
-    return [self cellWithTableView:tableView style:UITableViewCellStyleDefault];
++ (instancetype)gg_cellWithTableView:(UITableView *)tableView{
+    return [self gg_cellWithTableView:tableView style:UITableViewCellStyleDefault];
 }
-+ (instancetype)cellWithTableView:(UITableView *)tableView style:(UITableViewCellStyle)style{
++ (instancetype)gg_cellWithTableView:(UITableView *)tableView style:(UITableViewCellStyle)style{
     NSString *reuseIdentifier = [NSString stringWithFormat:@"%@-%ld",NSStringFromClass([self class]),(long)style];
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseIdentifier];
     if (!cell) {
-        
         cell = [[self alloc] initWithStyle:style reuseIdentifier:reuseIdentifier];
     }
     return cell;

@@ -11,7 +11,7 @@
 @implementation UITextField (GGConfiguration)
 
 
-- (UITextField * (^) (UIFont *))setFont{
+- (UITextField * (^) (UIFont *))gg_setFont{
     return ^(UIFont *value){
         
         self.font = value;
@@ -19,24 +19,26 @@
     };
 }
 
-- (UITextField * (^) (UIColor *))setTextColor{
+- (UITextField * (^) (UIColor *))gg_setTextColor{
     return ^(UIColor *value){
         self.textColor = value;
         return self;
     };
 }
-- (UITextField * (^) (NSTextAlignment))setTextAlignment{
+- (UITextField * (^) (NSTextAlignment))gg_setTextAlignment{
     return ^(NSTextAlignment value){
         self.textAlignment = value;
         return self;
     };
 }
-- (UITextField * (^) (NSString *))setText{
+- (UITextField * (^) (NSString *))gg_setText{
     return ^(NSString *value){
         self.text = value;
         return self;
     };
 }
 
-
+- (void)gg_configTextFieldWithBlock:(void(^)(UITextField *textField))block{
+    block(self);
+}
 @end

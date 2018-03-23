@@ -11,19 +11,18 @@
 @implementation UIView (GGGestureRecognizer)
 
 
-- (UITapGestureRecognizer *)addTapGestureWithTarget:(nullable id)target action:(nullable SEL)action
+- (UITapGestureRecognizer *)gg_addTapGestureWithTarget:(nullable id)target action:(nullable SEL)action
 {
     UITapGestureRecognizer *gesture = [[UITapGestureRecognizer alloc] initWithTarget:target action:action];
     [self addGestureRecognizer:gesture];
     return gesture;
 }
-- (UILongPressGestureRecognizer *)addLongPressGestureWithTarget:(nullable id)target action:(nullable SEL)action
+- (UILongPressGestureRecognizer *)gg_addLongPressGestureWithTarget:(nullable id)target action:(nullable SEL)action
 {
     UILongPressGestureRecognizer *gesture = [[UILongPressGestureRecognizer alloc] initWithTarget:target action:action];
     [self addGestureRecognizer:gesture];
     return gesture;
 }
-
 
 
 

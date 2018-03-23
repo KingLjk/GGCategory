@@ -10,14 +10,16 @@
 
 @interface UILabel (GGConfiguration)
 
-- (UILabel * (^) (UIFont *))setFont;
+- (UILabel * (^) (UIFont *))gg_setFont;
 
-- (UILabel * (^) (UIColor *))setTextColor;
+- (UILabel * (^) (UIColor *))gg_setTextColor;
 
-- (UILabel * (^) (NSTextAlignment))setTextAlignment;
+- (UILabel * (^) (NSTextAlignment))gg_setTextAlignment;
 
-- (UILabel * (^) (NSString *))setText;
+- (UILabel * (^) (NSString *))gg_setText;
 
-- (UILabel * (^) (NSAttributedString *))setAttributedText;
+- (UILabel * (^) (NSAttributedString *))gg_setAttributedText;
 
+
+- (void)gg_configLabelWithBlock:(void(^)(UILabel *label))block;
 @end

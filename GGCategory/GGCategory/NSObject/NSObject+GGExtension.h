@@ -10,10 +10,27 @@
 
 @interface NSObject (GGExtension)
 
-+ (instancetype)gg_objectWithDict:(NSDictionary *)dict;
+/**
+ 给对象属性赋值
 
+ @param dict 字典数据
+ */
 -(void)gg_configWithDict:(NSDictionary *)dict;
 
+
+/**
+ 使用字典实例化一个对象
+
+ @param dict 字典数据
+ @return 实例化对象
+ */
++ (instancetype)gg_objectWithDict:(NSDictionary *)dict;
+/**
+ 模型数组便捷创建
+ @param array 字典数组
+ @return 返回一个模型数组
+ */
++ (NSArray *)gg_objectsWithArray:(NSArray *)array;
 
 /**
  描述数组属性中保存的数据类型
@@ -23,7 +40,7 @@
  }
  @return return value description
  */
-- (NSDictionary *)customClassNameInArrayProperty;
+- (NSDictionary *)gg_customClassNameInArrayProperty;
 
 
 /**
@@ -35,7 +52,7 @@
  
  @return return value description
  */
-- (NSDictionary  *)customClassNameInThePropertyList;
+- (NSDictionary  *)gg_customClassNameInThePropertyList;
 
 
 /**
@@ -51,21 +68,9 @@
 - (NSArray *)gg_getProperties;
 + (NSArray *)gg_getProperties;
 
-/**
- 实例化一个模型
-
- @param dict 模型对应的字典数据
- @return 模型
- */
-+ (instancetype)instanceWithDict:(NSDictionary *)dict;
 
 
-/**
- 模型数组便捷创建
 
- @param array 字典数组
- @return 返回一个模型数组
- */
-+ (NSArray *)instanceWithArray:(NSArray *)array;
+
 
 @end

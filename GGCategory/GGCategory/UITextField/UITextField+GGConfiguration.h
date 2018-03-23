@@ -10,12 +10,15 @@
 
 @interface UITextField (GGConfiguration)
 
-- (UITextField * (^) (UIFont *))setFont;
+- (UITextField * (^) (UIFont *))gg_setFont;
 
-- (UITextField * (^) (UIColor *))setTextColor;
+- (UITextField * (^) (UIColor *))gg_setTextColor;
 
-- (UITextField * (^) (NSTextAlignment))setTextAlignment;
+- (UITextField * (^) (NSTextAlignment))gg_setTextAlignment;
 
-- (UITextField * (^) (NSString *))setText;
+- (UITextField * (^) (NSString *))gg_setText;
+
+
+- (void)gg_configTextFieldWithBlock:(void(^)(UITextField *textField))block;
 
 @end

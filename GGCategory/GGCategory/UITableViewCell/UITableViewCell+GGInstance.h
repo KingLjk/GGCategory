@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface UITableViewCell (GGInstance)
-+ (instancetype)cellWithTableView:(UITableView *)tableView;
-+ (instancetype)cellWithTableView:(UITableView *)tableView style:(UITableViewCellStyle)style;
++ (instancetype)gg_cellWithTableView:(UITableView *)tableView;
++ (instancetype)gg_cellWithTableView:(UITableView *)tableView style:(UITableViewCellStyle)style;
+
 @end

@@ -9,16 +9,16 @@
 #import <UIKit/UIKit.h>
 
 @interface UICollectionViewFlowLayout (GGConfiguration)
-- (UICollectionViewFlowLayout * (^)(CGSize))setItemSize;
+- (UICollectionViewFlowLayout * (^)(CGSize))gg_setItemSize;
 
-- (UICollectionViewFlowLayout * (^)(UIEdgeInsets))setSectionInset;
-
-
-- (UICollectionViewFlowLayout * (^)(CGFloat))setMinimumLineSpacing;
-
-- (UICollectionViewFlowLayout * (^)(CGFloat))setMinimumInteritemSpacing;
-
-- (UICollectionViewFlowLayout * (^)(UICollectionViewScrollDirection))setScrollDirection;
+- (UICollectionViewFlowLayout * (^)(UIEdgeInsets))gg_setSectionInset;
 
 
+- (UICollectionViewFlowLayout * (^)(CGFloat))gg_setMinimumLineSpacing;
+
+- (UICollectionViewFlowLayout * (^)(CGFloat))gg_setMinimumInteritemSpacing;
+
+- (UICollectionViewFlowLayout * (^)(UICollectionViewScrollDirection))gg_setScrollDirection;
+
+- (void)gg_configFlowLayoutWithBlock:(void(^)(UICollectionViewFlowLayout *flowLayout))block;
 @end

@@ -171,4 +171,18 @@
     [self setImage:image forState:UIControlStateHighlighted];
 }
 
+- (void)gg_configButtonWithBlock:(void(^)(UIButton *button))block{
+    block(self);
+}
+
+- (void)gg_configTitleLabelWithButtonBlock:(void(^)(UILabel *label))block{
+    block(self.titleLabel);
+}
+- (void)gg_configImageViewWithButtonBlock:(void(^)(UIImageView *imageView))block{
+    block(self.imageView);
+}
+- (void)gg_configButtonWithButtonBlock:(void(^)(UILabel *label,UIImageView *imageView))block{
+    block(self.titleLabel,self.imageView);
+}
+
 @end

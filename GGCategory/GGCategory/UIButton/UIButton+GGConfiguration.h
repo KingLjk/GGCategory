@@ -46,7 +46,13 @@
 - (UIButton *(^)(NSString *title, UIImage *image))highlightedTitleAndImage;
 
 
+#pragma ********************* block参数方法 *********************
+- (void)gg_configButtonWithBlock:(void(^)(UIButton *button))block;
 
+- (void)gg_configTitleLabelWithButtonBlock:(void(^)(UILabel *label))block;
+- (void)gg_configImageViewWithButtonBlock:(void(^)(UIImageView *imageView))block;
+
+- (void)gg_configButtonWithButtonBlock:(void(^)(UILabel *label,UIImageView *imageView))block;
 
 @end
 

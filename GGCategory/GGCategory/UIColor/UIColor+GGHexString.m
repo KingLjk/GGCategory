@@ -23,21 +23,10 @@
         return nil;
     }
     return[self colorWithRGBHex:hexNum alpha:alpha];
-
 }
 
 + (UIColor*)gg_colorWithHexString:(NSString*)stringToConvert{
-    if([stringToConvert hasPrefix:@"#"])
-    {
-        stringToConvert = [stringToConvert substringFromIndex:1];
-    }
-    NSScanner*scanner = [NSScanner scannerWithString:stringToConvert];
-    unsigned hexNum;
-    if(![scanner scanHexInt:&hexNum])
-    {
-        return nil;
-    }
-    return[self colorWithRGBHex:hexNum alpha:1.0];
+    return [self gg_colorWithHexString:stringToConvert alpha:1.0];
 }
 
 + (UIColor*)colorWithRGBHex:(UInt32)hex alpha:(float)alpha{
@@ -48,7 +37,6 @@
     }else if (a < 0){
         a = 0;
     }
-    
     int r = (hex >>16) &0xFF;
     int g = (hex >>8) &0xFF;
     int b = (hex) &0xFF;

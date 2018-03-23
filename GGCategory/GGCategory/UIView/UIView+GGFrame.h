@@ -9,47 +9,36 @@
 #import <UIKit/UIKit.h>
 
 @interface UIView (GGFrame)
-- (CGFloat)x;
-- (void)setX:(CGFloat)x;
-- (CGFloat)y;
-- (void)setY:(CGFloat)y;
-- (CGFloat)height;
-- (void)setHeight:(CGFloat)height;
-- (CGFloat)width;
-- (void)setWidth:(CGFloat)width;
+- (CGFloat)gg_x;
+- (void)setGg_x:(CGFloat)x;
+
+- (CGFloat)gg_y;
+- (void)setGg_y:(CGFloat)y;
+
+- (CGFloat)gg_width;
+- (void)setGg_width:(CGFloat)width;
+
+- (CGFloat)gg_height;
+- (void)setGg_height:(CGFloat)height;
+
+- (CGPoint)gg_origin;
+- (void)setGg_origin:(CGPoint)origin;
+
+- (CGSize)gg_size;
+- (void)setGg_size:(CGSize)size;
 
 
-- (CGSize)size;
-- (void)setSize:(CGSize)size;
-
-- (CGPoint)origin;
-- (void)setOrigin:(CGPoint)origin;
 
 
+#pragma ********************* 函数式 + 链式(带参) *********************
 
-/**
- // 函数式 + 链式(带参)
- UIView *redView = [UIView new];
- redView.backgroundColor = [UIColor redColor];
- 
- [self.view addSubview:redView];
- 
- 后边的参数位置可以使用前边刚设置的参数： 
- redView.originX(100).originY(redView.x).sizeWidth(100).sizeHeight(redView.width * 2);
- */
+- (UIView *(^)(CGFloat))gg_setX;
+- (UIView *(^)(CGFloat))gg_setY;
+- (UIView *(^)(CGFloat))gg_setWidth;
+- (UIView *(^)(CGFloat))gg_setHeight;
 
-- (UIView *(^)(CGFloat))originX;
-
-- (UIView *(^)(CGFloat))originY;
-
-- (UIView *(^)(CGPoint))gg_origin;
-
-- (UIView *(^)(CGSize))gg_size;
-
-- (UIView *(^)(CGFloat))sizeWidth;
-
-- (UIView *(^)(CGFloat))sizeHeight;
-
+- (UIView *(^)(CGPoint))gg_setOrigin;
+- (UIView *(^)(CGSize))gg_setSize;
 
 
 @end
