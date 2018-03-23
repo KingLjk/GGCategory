@@ -37,14 +37,14 @@
 -(void)gg_configWithDict:(NSDictionary *)dict{
     // 获取模型属性类名
     NSDictionary *customClassNameInThePropertyList;
-    if ([self respondsToSelector:@selector(customClassNameInThePropertyList)]) {
-        customClassNameInThePropertyList = [self performSelector:@selector(customClassNameInThePropertyList)];
+    if ([self respondsToSelector:@selector(gg_customClassNameInThePropertyList)]) {
+        customClassNameInThePropertyList = [self performSelector:@selector(gg_customClassNameInThePropertyList)];
     }
     
     // 获取数组中元素的类名
     NSDictionary *customClassNameInArrayProperty;
-    if ([self respondsToSelector:@selector(customClassNameInArrayProperty)]) {
-        customClassNameInArrayProperty = [self performSelector:@selector(customClassNameInArrayProperty)];
+    if ([self respondsToSelector:@selector(gg_customClassNameInArrayProperty)]) {
+        customClassNameInArrayProperty = [self performSelector:@selector(gg_customClassNameInArrayProperty)];
     }
     
     
@@ -80,21 +80,18 @@
             if (keyInDict) {
                 value = [dict valueForKey:keyInDict];
             }
-
             
             if (!value) {
                 continue;
             }else{
-                
-                
                 NSString *valueClassString = NSStringFromClass([value class]);
-                NSLog(@"字典中value:%@的类名%@",value,valueClassString);
+//                NSLog(@"字典中value:%@的类名%@",value,valueClassString);
                 //处理 模型数组
                 // __NSCFArray
                 // __NSArrayI
                 if ([valueClassString isEqualToString:@"__NSCFArray"] || [valueClassString containsString:@"__NSArray"]) {
                     if (![propertyTypeEncoding isEqualToString:@"@\"NSArray\""] && ![propertyTypeEncoding isEqualToString:@"@\"NSMutableArray\""]) {
-                        NSLog(@"模型中属性：%@不为数组格式, 为：%@格式",keyWithoutUnderscorePrefix,propertyTypeEncoding);
+//                        NSLog(@"模型中属性：%@不为数组格式, 为：%@格式",keyWithoutUnderscorePrefix,propertyTypeEncoding);
                         continue;
                     }
                     NSString *customClassName = customClassNameInArrayProperty[keyWithoutUnderscorePrefix];
@@ -121,7 +118,7 @@
                             [self setValue:value forKey:keyWithoutUnderscorePrefix];
                             continue;
                         }else{
-                            NSLog(@"模型中属性：%@不为数组格式, 为：%@格式",keyWithoutUnderscorePrefix,propertyTypeEncoding);
+//                            NSLog(@"模型中属性：%@不为数组格式, 为：%@格式",keyWithoutUnderscorePrefix,propertyTypeEncoding);
                             continue;
                         }
                         
