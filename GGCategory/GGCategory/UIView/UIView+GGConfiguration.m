@@ -11,7 +11,7 @@
 @implementation UIView (GGConfiguration)
 
 
-- (UIView *(^)(CGFloat ))gg_cornerRadius{
+- (UIView *(^)(CGFloat ))gg_setCornerRadius{
     return ^(CGFloat cornerRadius){
         self.layer.cornerRadius = cornerRadius;
         self.layer.masksToBounds = YES;
@@ -19,7 +19,7 @@
     };
 }
 
-- (UIView *(^)(CGFloat ))gg_borderWidth{
+- (UIView *(^)(CGFloat ))gg_setBorderWidth{
     return ^(CGFloat borderWidth){
         self.layer.borderWidth = borderWidth;
         return self;
@@ -27,13 +27,13 @@
 }
 
 
-- (UIView *(^)(UIColor *))gg_borderColor{
+- (UIView *(^)(UIColor *))gg_setBorderColor{
     return ^(UIColor* borderColor){
         self.layer.borderColor = [borderColor CGColor];
         return self;
     };
 }
-- (UIView *(^)(UIColor *))gg_backgroundColor{
+- (UIView *(^)(UIColor *))gg_setBackgroundColor{
     return ^(UIColor* value){
         self.backgroundColor = value;
         return self;

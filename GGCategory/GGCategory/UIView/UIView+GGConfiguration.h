@@ -14,23 +14,23 @@
 /**
  设置圆角
  */
-- (UIView *(^)(CGFloat))gg_cornerRadius;
+- (UIView *(^)(CGFloat))gg_setCornerRadius;
 
 /**
  设置边线宽度
  */
-- (UIView *(^)(CGFloat ))gg_borderWidth;
+- (UIView *(^)(CGFloat ))gg_setBorderWidth;
 
 /**
  设置边线颜色
  */
-- (UIView *(^)(UIColor *))gg_borderColor;
+- (UIView *(^)(UIColor *))gg_setBorderColor;
 
 
 /**
  设置背景颜色
  */
-- (UIView *(^)(UIColor *))gg_backgroundColor;
+- (UIView *(^)(UIColor *))gg_setBackgroundColor;
 
 - (void)gg_configViewWithBlock:(void(^)(UIView *view))block;
 

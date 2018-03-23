@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+
+#define kGGScreenBounds [UIScreen mainScreen].bounds
+#define kGGScreenSize [UIScreen mainScreen].bounds.size
+#define kGGScreenWidth [UIScreen mainScreen].bounds.size.width
+#define kGGScreenHeight [UIScreen mainScreen].bounds.size.height
+
 @interface UIView (GGFrame)
 - (CGFloat)gg_x;
 - (void)setGg_x:(CGFloat)x;
