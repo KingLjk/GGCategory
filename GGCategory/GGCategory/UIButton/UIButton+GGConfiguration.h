@@ -14,45 +14,54 @@
 
 #pragma 单个设置
 #pragma ********************* normal *********************
-- (UIButton *(^)(NSString *))normalTitle;
-- (UIButton *(^)(UIColor *))normalTitleColor;
-- (UIButton *(^)(UIImage *))normalImage;
+- (UIButton *(^)(NSString *))gg_setNTitle;
+- (UIButton *(^)(UIColor *))gg_setNTitleColor;
+- (UIButton *(^)(UIImage *))gg_setNImage;
 
 #pragma ********************* selected *********************
-- (UIButton *(^)(NSString *))selectedTitle;
-- (UIButton *(^)(UIColor *))selectedTitleColor;
-- (UIButton *(^)(UIImage *))selectedImage;
+- (UIButton *(^)(NSString *))gg_setSTitle;
+- (UIButton *(^)(UIColor *))gg_setSTitleColor;
+- (UIButton *(^)(UIImage *))gg_setSImage;
 
 #pragma ********************* highlighted *********************
-- (UIButton *(^)(NSString *))highlightedTitle;
-- (UIButton *(^)(UIColor *))highlightedTitleColor;
-- (UIButton *(^)(UIImage *))highlightedImage;
+- (UIButton *(^)(NSString *))gg_setHTitle;
+- (UIButton *(^)(UIColor *))gg_setHTitleColor;
+- (UIButton *(^)(UIImage *))gg_setHImage;
 
-#pragma ********************* backGroundColor *********************
-- (UIButton *(^)(UIColor *))backGroundColor;
-
-- (UIButton *(^)(UIFont *))font;
+#pragma ********************* 设置字体 *********************
+- (UIButton *(^)(UIFont *))gg_setFont;
 
 
-// 组合设置
-#pragma ********************* title And titleColor *********************
-- (UIButton *(^)(NSString *title, UIColor *color))normalTitleAndTitleColor;
-- (UIButton *(^)(NSString *title, UIColor *color))selectedTitleAndTitleColor;
-- (UIButton *(^)(NSString *title, UIColor *color))highlightedTitleAndTitleColor;
 
-#pragma ********************* title And image *********************
-- (UIButton *(^)(NSString *title, UIImage *image))normalTitleAndImage;
-- (UIButton *(^)(NSString *title, UIImage *image))selectedTitleAndImage;
-- (UIButton *(^)(NSString *title, UIImage *image))highlightedTitleAndImage;
 
+#pragma ********************* 单独设置,建议与带block参数的方法配合使用 *********************
+// 方法不能智能提示
+- (void)setGg_normalTitle:(NSString *)title;
+- (void)setGg_selectedTitle:(NSString *)title;
+- (void)setGg_highlightedTitle:(NSString *)title;
+- (void)setGg_normalTitleColor:(UIColor *)color;
+- (void)setGg_selectedTitleColor:(UIColor *)color;
+- (void)setGg_highlightedTitleColor:(UIColor *)color;
+- (void)setGg_normalImage:(UIImage *)image;
+- (void)setGg_selectedImage:(UIImage *)image;
+- (void)setGg_highlightedImage:(UIImage *)image;
 
 #pragma ********************* block参数方法 *********************
 - (void)gg_configButtonWithBlock:(void(^)(UIButton *button))block;
 
-- (void)gg_configTitleLabelWithButtonBlock:(void(^)(UILabel *label))block;
-- (void)gg_configImageViewWithButtonBlock:(void(^)(UIImageView *imageView))block;
 
-- (void)gg_configButtonWithButtonBlock:(void(^)(UILabel *label,UIImageView *imageView))block;
+
+- (void)gg_setNormalTitle:(NSString *)title;
+- (void)gg_setSelectedTitle:(NSString *)title;
+- (void)gg_setHighlightedTitle:(NSString *)title;
+- (void)gg_setNormalTitleColor:(UIColor *)color;
+- (void)gg_setSelectedTitleColor:(UIColor *)color;
+- (void)gg_setHighlightedTitleColor:(UIColor *)color;
+- (void)gg_setNormalImage:(UIImage *)image;
+- (void)gg_setSelectedImage:(UIImage *)image;
+- (void)gg_setHighlightedImage:(UIImage *)image;
+
+
 
 @end
 

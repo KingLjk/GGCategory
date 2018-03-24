@@ -14,6 +14,12 @@
 #define kGGScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kGGScreenHeight [UIScreen mainScreen].bounds.size.height
 
+// returns CGRectZero if the status bar is hidden
+#define kGGVisibleStatusBarFrame [UIApplication sharedApplication].statusBarFrame
+#define kGGVisibleStatusBarSize [UIApplication sharedApplication].statusBarFrame.size
+#define kGGVisibleStatusBarWidth [UIApplication sharedApplication].statusBarFrame.size.width
+#define kGGVisibleStatusBarHeight [UIApplication sharedApplication].statusBarFrame.size.height
+
 @interface UIView (GGFrame)
 - (CGFloat)gg_x;
 - (void)setGg_x:(CGFloat)x;

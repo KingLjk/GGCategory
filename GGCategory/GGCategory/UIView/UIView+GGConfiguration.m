@@ -26,19 +26,20 @@
     };
 }
 
-
 - (UIView *(^)(UIColor *))gg_setBorderColor{
     return ^(UIColor* borderColor){
         self.layer.borderColor = [borderColor CGColor];
         return self;
     };
 }
+
 - (UIView *(^)(UIColor *))gg_setBackgroundColor{
     return ^(UIColor* value){
         self.backgroundColor = value;
         return self;
     };
 }
+
 - (void)gg_configViewWithBlock:(void(^)(UIView *view))block{
     block(self);
 }

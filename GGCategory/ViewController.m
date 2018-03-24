@@ -13,7 +13,6 @@
 
 #import "GGCategoryHeader.h"
 
-
 @interface ViewController ()
 
 @end
@@ -23,6 +22,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
+    NSLog(@"%@",NSStringFromCGRect(kGGVisibleStatusBarFrame));
+    
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
@@ -31,8 +33,9 @@
     [self gg_showAlertWithTitle:title message:message actionWithTitle:nil handler:^{
         NSLog(@"...");
     }];
-    
 }
-
+//- (BOOL)prefersStatusBarHidden{
+//    return YES;
+//}
 
 @end

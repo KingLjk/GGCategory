@@ -11,6 +11,9 @@
 @implementation UIView (GGFrame)
 
 - (CGFloat)gg_x {
+    
+    
+    
     return self.frame.origin.x;
 }
 - (void)setGg_x:(CGFloat)x {

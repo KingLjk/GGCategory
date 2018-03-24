@@ -13,74 +13,67 @@
 
 #pragma 单个设置
 #pragma ********************* normal *********************
-- (UIButton *(^)(NSString *))normalTitle{
+- (UIButton *(^)(NSString *))gg_setNTitle{
     
     return ^(NSString *title){
-        [self setNormalTitle:title];
+        [self gg_setNormalTitle:title];
         return self;
     };
 }
-- (UIButton *(^)(UIColor *))normalTitleColor{
+- (UIButton *(^)(UIColor *))gg_setNTitleColor{
     return ^(UIColor *color){
-        [self setNormalTitleColor:color];
+        [self gg_setNormalTitleColor:color];
         return self;
     };
 }
-- (UIButton *(^)(UIImage *))normalImage{
+- (UIButton *(^)(UIImage *))gg_setNImage{
     return ^(UIImage *image){
-        [self setNormalImage:image];
+        [self gg_setNormalImage:image];
         return self;
     };
     
 }
 
 #pragma ********************* selected *********************
-- (UIButton *(^)(NSString *))selectedTitle{
+- (UIButton *(^)(NSString *))gg_setSTitle{
     return ^(NSString *title){
-        [self setSelectedTitle:title];
+        [self gg_setSelectedTitle:title];
         return self;
     };
 }
-- (UIButton *(^)(UIColor *))selectedTitleColor{
+- (UIButton *(^)(UIColor *))gg_setSTitleColor{
     return ^(UIColor *color){
-        [self setSelectedTitleColor:color];
+        [self gg_setSelectedTitleColor:color];
         return self;
     };
 }
-- (UIButton *(^)(UIImage *))selectedImage{
+- (UIButton *(^)(UIImage *))gg_setSImage{
     return ^(UIImage *image){
-        [self setSelectedImage:image];
+        [self gg_setSelectedImage:image];
         return self;
     };
 }
 
 #pragma ********************* highlighted *********************
-- (UIButton *(^)(NSString *))highlightedTitle{
+- (UIButton *(^)(NSString *))gg_setHTitle{
     return ^(NSString *title){
-        [self setHighlightedTitle:title];
+        [self gg_setHighlightedTitle:title];
         return self;
     };
 }
-- (UIButton *(^)(UIColor *))highlightedTitleColor{
+- (UIButton *(^)(UIColor *))gg_setHTitleColor{
     return ^(UIColor *color){
-        [self setHighlightedTitleColor:color];
+        [self gg_setHighlightedTitleColor:color];
         return self;
     };
 }
-- (UIButton *(^)(UIImage *))highlightedImage{
+- (UIButton *(^)(UIImage *))gg_setHImage{
     return ^(UIImage *image){
-        [self setSelectedImage:image];
+        [self gg_setSelectedImage:image];
         return self;
     };
 }
-#pragma ********************* backGroundColor *********************
-- (UIButton *(^)(UIColor *))backGroundColor{
-    return ^(UIColor *color){
-        self.backgroundColor = color;
-        return self;
-    };
-}
-- (UIButton *(^)(UIFont *))font{
+- (UIButton *(^)(UIFont *))gg_setFont{
     return ^(UIFont *value){
         self.titleLabel.font = value;
         return self;
@@ -88,86 +81,69 @@
 }
 
 
-#pragma 组合设置
-#pragma ********************* title And titleColor *********************
-- (UIButton *(^)(NSString *title, UIColor *color))normalTitleAndTitleColor{
-    return ^(NSString *title,UIColor *color){
-        [self setNormalTitle:title];
-        [self setNormalTitleColor:color];
-        return self;
-    };
+
+
+- (void)setGg_normalTitle:(NSString *)title{
+    [self setTitle:title forState:UIControlStateNormal];
 }
-- (UIButton *(^)(NSString *title, UIColor *color))selectedTitleAndTitleColor{
-    return ^(NSString *title,UIColor *color){
-        [self setSelectedTitle:title];
-        [self setSelectedTitleColor:color];
-        return self;
-    };
-}
-- (UIButton *(^)(NSString *title, UIColor *color))highlightedTitleAndTitleColor{
-    return ^(NSString *title,UIColor *color){
-        [self setHighlightedTitle:title];
-        [self setHighlightedTitleColor:color];
-        return self;
-    };
+- (void)setGg_selectedTitle:(NSString *)title{
+    [self setTitle:title forState:UIControlStateSelected];
 }
 
-#pragma ********************* title And image *********************
-- (UIButton *(^)(NSString *title, UIImage *image))normalTitleAndImage{
-    return ^(NSString *title, UIImage *image){
-        [self setNormalTitle:title];
-        [self setNormalImage:image];
-        return self;
-    };
+- (void)setGg_highlightedTitle:(NSString *)title{
+    [self setTitle:title forState:UIControlStateNormal];
 }
-- (UIButton *(^)(NSString *title, UIImage *image))selectedTitleAndImage{
-    return ^(NSString *title, UIImage *image){
-        [self setSelectedTitle:title];
-        [self setSelectedImage:image];
-        return self;
-    };
+- (void)setGg_normalTitleColor:(UIColor *)color{
+    [self setTitleColor:color forState:UIControlStateNormal];
 }
-- (UIButton *(^)(NSString *title, UIImage *image))highlightedTitleAndImage{
-    return ^(NSString *title, UIImage *image){
-        [self setHighlightedTitle:title];
-        [self setHighlightedImage:image];
-        return self;
-    };
-    
+- (void)setGg_selectedTitleColor:(UIColor *)color{
+    [self setTitleColor:color forState:UIControlStateSelected];
+}
+- (void)setGg_highlightedTitleColor:(UIColor *)color{
+    [self setTitleColor:color forState:UIControlStateHighlighted];
+}
+- (void)setGg_normalImage:(UIImage *)image{
+    [self setImage:image forState:UIControlStateNormal];
+}
+- (void)setGg_selectedImage:(UIImage *)image{
+    [self setImage:image forState:UIControlStateSelected];
+}
+- (void)setGg_highlightedImage:(UIImage *)image{
+    [self setImage:image forState:UIControlStateHighlighted];
 }
 
 
 
 
 #pragma *********************单独设置 *********************
-- (void)setNormalTitle:(NSString *)title{
+- (void)gg_setNormalTitle:(NSString *)title{
     [self setTitle:title forState:UIControlStateNormal];
 }
-- (void)setSelectedTitle:(NSString *)title{
-    [self setTitle:title forState:UIControlStateNormal];
+- (void)gg_setSelectedTitle:(NSString *)title{
+    [self setTitle:title forState:UIControlStateSelected];
 }
-- (void)setHighlightedTitle:(NSString *)title{
+- (void)gg_setHighlightedTitle:(NSString *)title{
     [self setTitle:title forState:UIControlStateNormal];
     
 }
-- (void)setNormalTitleColor:(UIColor *)color{
+- (void)gg_setNormalTitleColor:(UIColor *)color{
     [self setTitleColor:color forState:UIControlStateNormal];
 }
-- (void)setSelectedTitleColor:(UIColor *)color{
+- (void)gg_setSelectedTitleColor:(UIColor *)color{
     [self setTitleColor:color forState:UIControlStateSelected];
 }
-- (void)setHighlightedTitleColor:(UIColor *)color{
+- (void)gg_setHighlightedTitleColor:(UIColor *)color{
     [self setTitleColor:color forState:UIControlStateHighlighted];
 }
 
 
-- (void)setNormalImage:(UIImage *)image{
+- (void)gg_setNormalImage:(UIImage *)image{
     [self setImage:image forState:UIControlStateNormal];
 }
-- (void)setSelectedImage:(UIImage *)image{
+- (void)gg_setSelectedImage:(UIImage *)image{
     [self setImage:image forState:UIControlStateSelected];
 }
-- (void)setHighlightedImage:(UIImage *)image{
+- (void)gg_setHighlightedImage:(UIImage *)image{
     [self setImage:image forState:UIControlStateHighlighted];
 }
 
@@ -175,14 +151,5 @@
     block(self);
 }
 
-- (void)gg_configTitleLabelWithButtonBlock:(void(^)(UILabel *label))block{
-    block(self.titleLabel);
-}
-- (void)gg_configImageViewWithButtonBlock:(void(^)(UIImageView *imageView))block{
-    block(self.imageView);
-}
-- (void)gg_configButtonWithButtonBlock:(void(^)(UILabel *label,UIImageView *imageView))block{
-    block(self.titleLabel,self.imageView);
-}
-
 @end
+
