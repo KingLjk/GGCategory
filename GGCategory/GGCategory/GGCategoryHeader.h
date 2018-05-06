@@ -16,6 +16,7 @@
 #import "UIColor+GGHexString.h"
 
 #import "UIImage+GGGIF.h"
+#import "UIImage+GGColor.h"
 #import "NSObject+GGExtension.h"
 
 

@@ -28,6 +28,7 @@
 		636BAF68205F5B3D008C2DA6 /* Son.m in Sources */ = {isa = PBXBuildFile; fileRef = 636BAF67205F5B3D008C2DA6 /* Son.m */; };
 		6396E41F205A757900C49B6A /* NSObject+GGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6396E41E205A757900C49B6A /* NSObject+GGExtension.m */; };
 		63C9B3E32064E2FC0034AB5D /* UIViewController+GGAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 63C9B3E22064E2FC0034AB5D /* UIViewController+GGAlert.m */; };
+		63F00091209EF22400796BFA /* UIImage+GGColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 63F00090209EF22400796BFA /* UIImage+GGColor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,8 @@
 		6396E41E205A757900C49B6A /* NSObject+GGExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+GGExtension.m"; sourceTree = "<group>"; };
 		63C9B3E12064E2FC0034AB5D /* UIViewController+GGAlert.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+GGAlert.h"; sourceTree = "<group>"; };
 		63C9B3E22064E2FC0034AB5D /* UIViewController+GGAlert.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+GGAlert.m"; sourceTree = "<group>"; };
+		63F0008F209EF22400796BFA /* UIImage+GGColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+GGColor.h"; sourceTree = "<group>"; };
+		63F00090209EF22400796BFA /* UIImage+GGColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GGColor.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +208,8 @@
 			children = (
 				635271692057A703005B2166 /* UIImage+GGGIF.h */,
 				6352716A2057A703005B2166 /* UIImage+GGGIF.m */,
+				63F0008F209EF22400796BFA /* UIImage+GGColor.h */,
+				63F00090209EF22400796BFA /* UIImage+GGColor.m */,
 			);
 			path = UIImage;
 			sourceTree = "<group>";
@@ -320,6 +325,7 @@
 				6352712D205777D1005B2166 /* main.m in Sources */,
 				630B37CB205B5A4E00F47299 /* UITextField+GGConfiguration.m in Sources */,
 				6352714120578A00005B2166 /* UIColor+GGRGBA.m in Sources */,
+				63F00091209EF22400796BFA /* UIImage+GGColor.m in Sources */,
 				635271682057A588005B2166 /* UIColor+GGHexString.m in Sources */,
 				635271982057D877005B2166 /* UIView+GGGestureRecognizer.m in Sources */,
 				630B37CE205B60DB00F47299 /* UIView+GGConfiguration.m in Sources */,
